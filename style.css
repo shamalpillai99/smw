@@ -37,20 +37,16 @@ img {
     display: block; 
 }
 
-/* --- High-Impact, Eye-Catching Header --- */
 header {
-    background: #090d16;
+    background: #0f172a;
     color: #fff;
-    padding: 1.2rem 5%;
+    padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border-bottom: 2px solid transparent;
-    border-image: linear-gradient(90deg, var(--accent-color), #3b82f6, var(--accent-color)) 1;
 }
 
 /* Logo Styling with a subtle glow */
