@@ -570,22 +570,25 @@ body.main_background {
     }
 }
 
-/* --- Optional: Give individual cards your texture background instead --- */
+/* --- Service Card Background & Layout Fix --- */
 .service-card {
     background: linear-gradient(rgba(18, 50, 78, 0.85), rgba(18, 50, 78, 0.85)), url('images/frequency_grid.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     border-radius: 16px;
     box-shadow: var(--shadow-soft);
     overflow: hidden;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Fixed missing variable */
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-hover);
-    border-color: rgba(245, 158, 11, 0.3);
+    border-color: rgba(245, 158, 11, 0.4);
 }
 
 /* --- Service Card Text Color Fix --- */
