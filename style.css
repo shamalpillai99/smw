@@ -345,7 +345,7 @@ main {
 .next-btn { right: 15px; }
 
 .service-card-content { 
-    padding: 2rem; 
+    padding: 2.5rem 2rem 2rem 2rem; /* Increased top padding from 2rem to 2.5rem */
     text-align: left; 
 }
 
