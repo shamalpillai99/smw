@@ -680,7 +680,7 @@ body.main_background {
 }
 
 .hero-content {
-    padding: 0 3rem;
+    padding: 0 3rem 50px 3rem; /* Added 50px at the bottom to lift the button/text up */
     max-width: 900px;
     color: #ffffff;
 }
@@ -736,14 +736,13 @@ body.main_background {
 /* --- Slider Pagination Dots --- */
 .slider-dots {
     position: absolute;
-    bottom: 25px; /* Increase this value (e.g., 25px or 30px) to push the dots higher up */
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
-    z-index: 10; /* Ensures the dots sit cleanly above background elements */
+    z-index: 10;
 }
-
 .dot {
     width: 12px;
     height: 12px;
