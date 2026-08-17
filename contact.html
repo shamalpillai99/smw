@@ -37,6 +37,7 @@
         <h1 class="page-title">Contact & Directions</h1>
         
         <div class="contact-container">
+            <!-- Left Side: Contact Info & Directions -->
             <div>
                 <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Get in Touch</h2>
                 <p><strong>Phone:</strong> (679) 7073093 | (679) 9219777</p>
@@ -45,32 +46,59 @@
                 <h2 style="color: var(--primary-color); margin-bottom: 1rem;">How to Find Us</h2>
                 <p><strong>Address:</strong> Hooper Street, Savusavu, Fiji</p>
                 <br>
-                <p><strong>Directions:</strong> We are located on the main Kings Road, just past the central roundabout. Look for the large yellow lightning bolt sign on the left side of the street. Free parking is available for customers in the rear lot.</p>
+                <p><strong>Directions:</strong> We are located on Hooper Street, Savusavu. Look for the large sign on the left side of the street. Free parking is available for customers in the rear lot.</p>
                 <br>
                 <p><strong>Hours:</strong></p>
                 <p>Monday - Friday | 8:00 AM - 5:00 PM</p>
-                <p>Saturday        | 8:00 AM - 1:00 PM</p>   
+                <p>Saturday        | 8:00 AM - 1:00 PM</p>
+                <br><br>
                 
-            </div>
-            
-            <div>
-               <div style="background-color: #f1f2f6; padding: 2rem; border-radius: 8px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 300px;">
-                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Find Us on Google Maps</h3>
-                <p style="margin-bottom: 1.5rem; color: #555;">15 Kings Road, Suva, Fiji</p>
-                
-                <!-- A clean button that opens real Google Directions in a new tab -->
-                <a href="https://maps.google.com/?q=15+Kings+Road+Suva+Fiji" target="_blank" class="submit-btn" style="text-decoration: none; display: inline-block; max-width: 250px;">
+                <!-- Quick Google Maps Action -->
+                <a href="https://maps.google.com/?q=Hooper+Street+Savusavu+Fiji" target="_blank" class="submit-btn" style="text-decoration: none; display: inline-block; text-align: center; max-width: 250px;">
                     📍 Open in Google Maps
                 </a>
             </div>
+            
+            <!-- Right Side: Professional Contact Form -->
+            <div>
+                <div style="background-color: var(--light-bg); padding: 2.5rem; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: var(--shadow-soft);">
+                    <h2 style="color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1.5rem;">Send Us a Message</h2>
+                    <p style="margin-bottom: 1.5rem; color: #64748b; font-size: 0.95rem;">Have an inquiry or need a motor serviced? Drop us a line below.</p>
+                    
+                    <form action="https://formsubmit.co/rahulssv@yahoo.com" method="POST" class="contact-form">
+                        <!-- Configuration options for formsubmit (optional: prevents captcha redirect if desired, or leaves standard) -->
+                        <input type="hidden" name="_subject" value="New Inquiry from Savusavu Motor Winders Website">
+                        
+                        <div>
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+
+                        <div>
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+
+                        <div>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(679) XXX XXXX">
+                        </div>
+
+                        <div>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="How can we help you?"></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Savusavu Motor Winders. Copyright 2026.</p>
+    <footer style="text-align: center; padding: 2rem; color: var(--text-color);">
+        <p>&copy; 2026 Savusavu Motor Winders. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
-
 </body>
 </html>
