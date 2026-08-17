@@ -37,23 +37,57 @@
     </header>
     
     <main>
-        <!-- 1. The Hero Banner with Background Image -->
-        <div class="home-hero-bg" style="margin-bottom: 2rem;">
-            <h1>Savusavu Motor Winders</h1>
-            <p style="font-weight: bold; color: var(--accent-color); font-size: 1.4rem;">Proudly local. Family owned. Reliable electrical solutions for Savusavu and beyond.</p>
+        <!-- Hero Banner Slider -->
+        <div class="hero-slider-container">
+            <!-- SLIDE 1 -->
+            <div class="hero-slide active" style="background: linear-gradient(rgba(18, 50, 78, 0.85), rgba(18, 50, 78, 0.85)), url('images/frequency_grid.jpg'); background-size: cover; background-position: center;">
+                <div class="hero-content">
+                    <h1>Savusavu <span>Motor Winders</span></h1>
+                    <p style="font-weight: bold; color: var(--accent-color); font-size: 1.3rem;">Proudly local. Family owned. Reliable electrical solutions for Savusavu and beyond.</p>
+                </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="hero-slide" style="background: linear-gradient(rgba(18, 50, 78, 0.85), rgba(18, 50, 78, 0.85)), url('images/frequency_grid.jpg'); background-size: cover; background-position: center;">
+                <div class="hero-content">
+                    <h1>Expert <span>Motor Winding</span> & Repairs</h1>
+                    <p style="font-size: 1.2rem; color: #cbd5e1;">Specialized electrical winding and generator repairs across Vanua Levu.</p>
+                    <a href="services.html" class="cta-button">View Our Services</a>
+                </div>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="hero-slide" style="background: linear-gradient(rgba(18, 50, 78, 0.85), rgba(18, 50, 78, 0.85)), url('images/frequency_grid.jpg'); background-size: cover; background-position: center;">
+                <div class="hero-content">
+                    <h1>Marine & <span>Industrial</span> Electrical</h1>
+                    <p style="font-size: 1.2rem; color: #cbd5e1;">Keeping domestic, commercial, automotive, and marine systems running safely and efficiently.</p>
+                    <a href="contact.html" class="cta-button">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Slider Navigation Arrows -->
+            <button class="slider-arrow prev-arrow" id="prevSlide">&#10094;</button>
+            <button class="slider-arrow next-arrow" id="nextSlide">&#10095;</button>
+            
+            <!-- Slide Dots at Bottom -->
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
         </div>
 
-        <!-- 2. Separated Description Section -->
-        <div style="background-color: var(--light-bg); padding: 2.5rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); line-height: 1.8;">
+        <!-- Separated Description Section -->
+        <div style="background-color: var(--light-bg); padding: 2.5rem; border-radius: 16px; box-shadow: var(--shadow-soft); border: 1px solid #e2e8f0; line-height: 1.8;">
             <h2 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.8rem;">Family-Owned Electrical Workshop in Savusavu, Fiji</h2>
             
             <p style="margin-bottom: 1.2rem; color: #445;">We are a family-owned electrical workshop proudly serving Savusavu and the surrounding communities of Vanua Levu, Fiji. With years of hands-on experience and a strong commitment to quality workmanship, we provide reliable electrical solutions for domestic, automotive, marine, industrial, and commercial needs.</p>
-            <p style="margin-bottom: 1.2rem; color: #475569;">Our services include commercial electrical installation, marine electrical work, motor winding, auto electrical repairs, electrical appliance repairs, and generator servicing. We work with a wide range of equipment and are dedicated to finding practical, dependable solutions for every customer.</p>               
+            <p style="margin-bottom: 1.2rem; color: #475569;">Our services include commercial electrical installation, marine electrical work, motor winding, auto electrical repairs, electrical appliance repairs, and generator servicing. We work with a wide range of equipment and are dedicated to finding practical, dependable solutions for every customer.</p>                
             <p style="color: #445;">As a local family-owned business, we take pride in providing honest service, quality workmanship, and personalized attention to our customers. Whether it’s a small electrical repair or a larger industrial or marine job, our goal is to keep your equipment and electrical systems working safely and reliably.</p>
         </div>
     </main>
 
-    <!-- JavaScript file for mobile menu -->
+    <!-- JavaScript file for mobile menu & slider -->
     <script src="script.js"></script>
 </body>
 </html>
