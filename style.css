@@ -673,8 +673,8 @@ body.main_background {
     visibility: hidden;
     transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
     text-align: center;
 }
 
@@ -684,9 +684,14 @@ body.main_background {
 }
 
 .hero-content {
-    padding: 0 3rem 50px 3rem; /* Added 50px at the bottom to lift the button/text up */
+    padding: 2rem 1.5rem 4rem 1.5rem; /* Balanced padding */
     max-width: 900px;
+    width: 100%;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-content h1 {
