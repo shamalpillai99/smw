@@ -611,6 +611,10 @@ body.main_background {
 /* --- Service Card Text Color Fix --- */
 .service-card h3 { 
     color: #ffffff !important; 
+    margin-top: 0.5rem; /* Adds space between the image/top and the title */
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+    font-weight: 600; 
 }
 
 .service-card p {
