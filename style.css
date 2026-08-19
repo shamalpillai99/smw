@@ -474,11 +474,12 @@ main {
     cursor: pointer;
     transition: var(--transition);
     flex-shrink: 0;
-    width: 140px; /* Fixed width so all country codes display comfortably */
+    width: 140px; /* Fixed width for country code dropdown */
 }
 
 .phone-input-group input[type="tel"] {
-    flex-grow: 1; /* Stretches to fill remaining horizontal space */
+    flex: 1 1 auto; /* Ensures it takes up all the remaining horizontal space */
+    min-width: 0;   /* Prevents flexbox overflow bug */
     width: auto;
 }
 
