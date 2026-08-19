@@ -783,3 +783,29 @@ body.main_background {
         height: 220px;
     }
 }
+
+/* --- Country Code & Phone Input Group Styling --- */
+.phone-input-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.country-code-select {
+    padding: 0.9rem 0.6rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background-color: #f8fafc;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.country-code-select:focus,
+.phone-input-group input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
