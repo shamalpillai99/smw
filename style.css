@@ -18,7 +18,7 @@
     --body-bg: #f8fafc;
     --text-color: #334155;
     --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-    --shadow-hover: 0 20px 30px -10px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 20px 30px -10px rgba(0, 0, 0, 0.15);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -271,19 +271,13 @@ main {
 .services-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 4rem;
     background: none !important;
     padding: 0 !important;
     border: none !important;
     opacity: 0;
     transform: translateY(40px);
     animation: slideUpFromBottom 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
-}
-
-@media (min-width: 768px) {
-    .services-grid { 
-        grid-template-columns: repeat(2, 1fr); 
-    }
 }
 
 @keyframes slideUpFromBottom {
@@ -297,35 +291,93 @@ main {
     }
 }
 
-/* --- Service Card Background & Layout Fix --- */
+/* --- Service Card: Side-by-Side Overlapping Layout with Zig-Zag Pattern --- */
 .service-card {
-    background: linear-gradient(rgba(18, 50, 78, 0.9), rgba(18, 50, 78, 0.9)), url('images/frequency_grid.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: transparent;
     border-radius: 16px;
-    box-shadow: var(--shadow-soft);
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    will-change: transform, box-shadow;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: visible; 
+    border: none;
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 900px) {
+    .service-card {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr; 
+        align-items: center; 
+    }
+    
+    /* Odd Rows: Image on Left, Content Overlapping on Right */
+    .card-image-container {
+        grid-column: 1 / 2;
+        z-index: 1;
+    }
+
+    .service-card-content {
+        grid-column: 2 / 3;
+        margin-left: -22%;
+        margin-right: 0;
+        z-index: 3;
+    }
+
+    /* Even Rows (Zig-Zag): Content on Left Overlapping, Image on Right */
+    .service-card:nth-child(even) {
+        grid-template-columns: 1fr 1.4fr;
+    }
+
+    .service-card:nth-child(even) .card-image-container {
+        grid-column: 2 / 3;
+        order: 2;
+        z-index: 1;
+    }
+
+    .service-card:nth-child(even) .service-card-content {
+        grid-column: 1 / 2;
+        order: 1;
+        margin-left: 0;
+        margin-right: -22%;
+        z-index: 3;
+    }
+}
+
+/* --- Content Box Styling --- */
+.service-card-content {
+    background-color: #1e1b4b; 
+    padding: 3.5rem 3rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.4);
 }
 
-.service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-hover);
-    border-color: rgba(245, 158, 11, 0.4);
+.service-card h3 {
+    color: #ffffff !important; 
+    margin-top: 0; 
+    margin-bottom: 0.75rem;
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
-/* --- Fixed Image Container inside Service Cards --- */
+.service-card p {
+    color: #cbd5e1 !important; 
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- Image Container Styling --- */
 .card-image-container {
     position: relative;
     width: 100%;
-    height: 280px;
-    overflow: hidden;
+    aspect-ratio: 16 / 10; 
+    overflow: visible; 
     background-color: #0f172a;
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
     transform: translateZ(0);
 }
 
@@ -337,10 +389,11 @@ main {
     height: 100%;
     object-fit: cover;
     object-position: center center;
+    border-radius: 16px; 
     opacity: 0;
     visibility: hidden;
     display: block !important;
-    transition: opacity 0.4s ease-in-out, transform 0.3s ease;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease;
 }
 
 .service-slider-img.active {
@@ -356,11 +409,11 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(15, 23, 42, 0.7);
+    background-color: rgba(15, 23, 42, 0.85); 
     color: #fff;
     border: none;
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     cursor: pointer;
     font-size: 1rem;
     border-radius: 50%;
@@ -368,8 +421,9 @@ main {
     align-items: center;
     justify-content: center;
     transition: var(--transition);
-    z-index: 10;
+    z-index: 20; 
     -webkit-tap-highlight-color: transparent;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
 .slider-btn:hover {
@@ -384,26 +438,9 @@ main {
     transform: translateY(-50%) !important;
 }
 
-.prev-btn { left: 15px; }
-.next-btn { right: 15px; }
-
-.service-card-content { 
-    padding: 2.5rem 2rem 2rem 2rem; 
-    text-align: left; 
-}
-
-.service-card h3 { 
-    color: #ffffff !important; 
-    margin-top: 0.5rem; 
-    margin-bottom: 0.75rem;
-    font-size: 1.4rem;
-    font-weight: 600; 
-}
-
-.service-card p {
-    color: #cbd5e1 !important; 
-    font-size: 0.95rem;
-}
+/* Pinned slightly inside so they never clip on either side */
+.prev-btn { left: 16px; }
+.next-btn { right: 16px; }
 
 /* --- Contact Section --- */
 .contact-container {
@@ -474,12 +511,12 @@ main {
     cursor: pointer;
     transition: var(--transition);
     flex-shrink: 0;
-    width: 140px; /* Fixed width for country code dropdown */
+    width: 140px;
 }
 
 .phone-input-group input[type="tel"] {
-    flex: 1 1 auto; /* Ensures it takes up all the remaining horizontal space */
-    min-width: 0;   /* Prevents flexbox overflow bug */
+    flex: 1 1 auto; 
+    min-width: 0;    
     width: auto;
 }
 
@@ -705,13 +742,17 @@ body.main_background {
         font-size: 1.2rem;
     }
     .card-image-container {
-        height: 240px;
+        min-height: 250px;
+    }
+    /* Reset overlap for mobile viewports */
+    .service-card-content {
+        margin: 0 !important;
     }
 }
 
 @media (max-width: 480px) {
     .card-image-container {
-        height: 220px;
+        min-height: 220px;
     }
 }
 
