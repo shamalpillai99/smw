@@ -754,6 +754,16 @@ body.main_background {
     .card-image-container {
         min-height: 220px;
     }
+    
+    /* Mobile Fix for Phone Input Group */
+    .phone-input-group {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .country-code-select {
+        width: 100% !important;
+    }
 }
 
 /* --- Instant CSS Page Fade-In --- */
