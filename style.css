@@ -774,4 +774,42 @@ body {
 @keyframes fadeInPage {
     from { opacity: 0; }
     to { opacity: 1; }
+}/* --- Mobile Horizontal Overflow & Layout Fix --- */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 2rem 3%;
+    }
+
+    .contact-container, 
+    .info-card-section {
+        padding: 1.25rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Prevents long text/links from blowing out container width */
+    .contact-container *,
+    .info-card-section * {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+@media (max-width: 480px) {
+    .phone-input-group {
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    .country-code-select,
+    .phone-input-group input[type="tel"] {
+        width: 100% !important;
+        flex: none;
+    }
 }
