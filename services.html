@@ -134,22 +134,22 @@
     </footer>
     <script src="script.js"></script>
     <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll('.service-card');
-    
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
-                observer.unobserve(entry.target); // Keeps the animation locked in place once revealed
-            }
-        });
-    }, {
-        threshold: 0.25 // Triggers when 25% of the card enters the screen
-    });
+            document.addEventListener("DOMContentLoaded", () => {
+                const cards = document.querySelectorAll('.service-card');
 
-    cards.forEach(card => observer.observe(card));
-});
-</script>
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('in-view');
+                            observer.unobserve(entry.target); // Keeps the animation locked in place once revealed
+                        }
+                    });
+                }, {
+                    threshold: 0.25 // Triggers when 25% of the card enters the screen
+                });
+
+                cards.forEach(card => observer.observe(card));
+            });
+    </script>
 </body>
 </html>
