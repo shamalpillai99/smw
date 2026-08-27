@@ -293,7 +293,7 @@ main {
 }
 
 .service-card-content {
-    background: linear-gradient(rgba(30, 27, 75, 0.88), rgba(30, 27, 75, 0.88)), url('images/frequency_grid.jpg');
+    background: linear-gradient(rgba(18, 50, 78, 0.85), rgba(18, 50, 78, 0.85)), url('images/frequency_grid.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -703,7 +703,7 @@ main {
 
 /* --- Page Background Variations --- */
 body.services-page {
-    background: linear-gradient(rgba(198, 201, 209, 0.85), rgba(181, 184, 193, 0.85)), url('images/services_background.png');
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('images/background4.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -711,7 +711,7 @@ body.services-page {
 }
 
 body.contact-page {
-    background: linear-gradient(rgba(198, 201, 209, 0.85), rgba(181, 184, 193, 0.85)), url('images/background.png');
+    background: linear-gradient(rgba(67, 64, 64, 0.85), rgba(236, 90, 33, 0.85)), url('images/background4.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -719,7 +719,7 @@ body.contact-page {
 }
 
 body.main_background {
-    background: linear-gradient(rgba(198, 201, 209, 0.85), rgba(181, 184, 193, 0.85)), url('images/background3.png');
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('images/background4.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -814,7 +814,7 @@ body.main_background {
         margin: 0 !important;
         border-radius: 0 0 16px 16px;
         box-shadow: none;
-        background: linear-gradient(rgba(30, 27, 75, 0.88), rgba(30, 27, 75, 0.88)), url('images/frequency_grid.jpg');
+        background: linear-gradient(rgba(18, 50, 78, 0.85), rgba(18, 50, 78, 0.85)), url('images/frequency_grid.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -845,4 +845,65 @@ body.main_background {
         width: 100% !important;
         flex: none;
     }
+}
+
+/* --- Why Choose Us Section --- */
+.why-choose-us {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    letter-spacing: -0.5px;
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .why-choose-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.why-choose-card {
+    background-color: var(--light-bg);
+    padding: 2.5rem 1.75rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid #e2e8f0;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.why-choose-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(245, 158, 11, 0.4);
+}
+
+.why-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.why-choose-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.why-choose-card p {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.6;
 }
