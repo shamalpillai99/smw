@@ -4,50 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Savusavu Motor Winders | Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="services-page">    
-    <header>
-        <div style="display: flex; align-items: center; gap: 1.5rem;">
-            <div class="dropdown">
-                <button class="dropbtn" aria-label="Menu">
-                    <span class="hamburger-icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>
-                </button>
-                <div class="dropdown-content">
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="contact.html">Contact Us</a>
-                </div>
+<body>    
+   <header>
+    <div class="nav-brand-group">
+        <div class="dropdown">
+            <button class="dropbtn" aria-label="Menu">
+                <span class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="projects.html">Major Projects</a>
+                <a href="contact.html">Contact Us</a>
             </div>
-        
-            <a href="index.html" class="logo">⚡ SMW </a>
         </div>
+        <a href="index.html" class="logo">⚡ SMW </a>
+    </div>
 
-        <!-- Right Side: Quick Links -->
-        <nav class="top-nav">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
+    <nav class="top-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Major Projects</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+</header>
     <main>
         <h1 class="page-title">Our Services</h1>
         
         <div class="services-grid">
-            
-            <!-- Service 1: Commercial Electrical Installation -->
             <div class="service-card">
                 <div class="card-image-container">
                     <img src="images/jdayaram_1.jpg" class="service-slider-img active" alt="Commercial Electrical">
                     <img src="images/jdayaram_2.jpg" class="service-slider-img" alt="Commercial Electrical 2">
                     <img src="images/jdayaram_3.jpg" class="service-slider-img" alt="Commercial Electrical 3">
-                   <button type="button" class="slider-btn prev-btn">&#10094;</button>
-                   <button type="button" class="slider-btn next-btn">&#10095;</button>
-                    <!-- Add extra images here if you use the slider -->
+                    <button type="button" class="slider-btn prev-btn" aria-label="Previous Image">&#10094;</button>
+                    <button type="button" class="slider-btn next-btn" aria-label="Next Image">&#10095;</button>
                 </div>
                 <div class="service-card-content">
                     <h3>Commercial Electrical Installation</h3>
@@ -55,14 +55,12 @@
                 </div>
             </div>
 
-            <!-- Service 2: Marine Electrical -->
             <div class="service-card">
                 <div class="card-image-container">
                     <img src="images/marine.png" class="service-slider-img active" alt="Marine Electrical">
                     <img src="images/diagnostics.jpg" class="service-slider-img" alt="Motor Rewind 2">
-                    <button type="button" class="slider-btn prev-btn">&#10094;</button>
-                    <button type="button" class="slider-btn next-btn">&#10095;</button>
-                    <!-- Add extra images here if you use the slider -->
+                    <button type="button" class="slider-btn prev-btn" aria-label="Previous Image">&#10094;</button>
+                    <button type="button" class="slider-btn next-btn" aria-label="Next Image">&#10095;</button>
                 </div>
                 <div class="service-card-content">
                     <h3>Marine Electrical</h3>
@@ -70,41 +68,38 @@
                 </div>
             </div>
             
-            <!-- Service 3: Motor Winding -->
             <div class="service-card">
                 <div class="card-image-container">
                     <img src="images/motor-rewind.jpg" class="service-slider-img active" alt="Motor Rewind 1">
                     <img src="images/diagnostics.jpg" class="service-slider-img" alt="Motor Rewind 2">
-                    <button type="button" class="slider-btn prev-btn">&#10094;</button>
-                    <button type="button" class="slider-btn next-btn">&#10095;</button>
+                    <button type="button" class="slider-btn prev-btn" aria-label="Previous Image">&#10094;</button>
+                    <button type="button" class="slider-btn next-btn" aria-label="Next Image">&#10095;</button>
                 </div>
                 <div class="service-card-content">
                     <h3>Motor Rewinding</h3>
                     <p>Extend the life of your critical workshop equipment.</p>
                 </div>
             </div>
-            <!-- Service 4: Appliance Repair  -->
+
             <div class="service-card">
                 <div class="card-image-container">
                     <img src="images/appliance-repair.jpg" class="service-slider-img active" alt="Appliance Repair 1">
                     <img src="images/hero-image.jpg" class="service-slider-img" alt="Appliance Repair 2">
-                 <button type="button" class="slider-btn prev-btn">&#10094;</button>
-                 <button type="button" class="slider-btn next-btn">&#10095;</button>
+                    <button type="button" class="slider-btn prev-btn" aria-label="Previous Image">&#10094;</button>
+                    <button type="button" class="slider-btn next-btn" aria-label="Next Image">&#10095;</button>
                 </div>
                 <div class="service-card-content">
                     <h3>Appliance Repair</h3>
                     <p>Diagnosis and repair of commercial appliances.</p>
                 </div>
             </div>
-            
-         
-            <!-- Service 5: Electrical Diagnostic & Safety -->
+
             <div class="service-card">
                 <div class="card-image-container">
                     <img src="images/diagnostics.jpg" class="service-slider-img active" alt="Diagnostics 1">
                     <img src="images/appliance-repair.jpg" class="service-slider-img" alt="Diagnostics 2">
-                  <button type="button" class="slider-btn prev-btn">&#10094;</button>
-                  <button type="button" class="slider-btn next-btn">&#10095;</button>
+                    <button type="button" class="slider-btn prev-btn" aria-label="Previous Image">&#10094;</button>
+                    <button type="button" class="slider-btn next-btn" aria-label="Next Image">&#10095;</button>
                 </div>
                 <div class="service-card-content">
                     <h3>Diagnostics & Safety</h3>
@@ -112,44 +107,24 @@
                 </div>
             </div>
             
-            <!-- Service 6: Auto Electrical Services -->
             <div class="service-card">
                 <div class="card-image-container">
                     <img src="images/auto_electrical_1.jpeg" class="service-slider-img active" alt="Auto Electrical 1">
                     <img src="images/auto_electrical_2.jpeg" class="service-slider-img" alt="Auto Electrical 2">
-                   <button type="button" class="slider-btn prev-btn">&#10094;</button>
-                   <button type="button" class="slider-btn next-btn">&#10095;</button>
+                    <button type="button" class="slider-btn prev-btn" aria-label="Previous Image">&#10094;</button>
+                    <button type="button" class="slider-btn next-btn" aria-label="Next Image">&#10095;</button>
                 </div>
                 <div class="service-card-content">
                     <h3>Auto Electrical Services</h3>
                     <p>Circuit testing and safety inspections to maximize uptime.</p>
                 </div>
             </div>
-
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Savusavu Motor Winders. Copyright 2026.</p>
+        <p>&copy; 2026 Savusavu Motor Winders. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
-    <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const cards = document.querySelectorAll('.service-card');
-
-                const observer = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('in-view');
-                            observer.unobserve(entry.target); // Keeps the animation locked in place once revealed
-                        }
-                    });
-                }, {
-                    threshold: 0.25 // Triggers when 25% of the card enters the screen
-                });
-
-                cards.forEach(card => observer.observe(card));
-            });
-    </script>
 </body>
 </html>
