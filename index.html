@@ -4,42 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Savusavu Motor Winders | Home</title>
-    <!-- Links to your stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="main_background">
+<body>
     <header>
-        <!-- Left Side: Dropdown Menu & Logo -->
-        <div style="display: flex; align-items: center; gap: 1.5rem;">
-            <div class="dropdown">
-                <button class="dropbtn" aria-label="Menu">
-                    <span class="hamburger-icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>
-                </button>
-                <div class="dropdown-content">
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="contact.html">Contact Us</a>
-                </div>
+    <div class="nav-brand-group">
+        <div class="dropdown">
+            <button class="dropbtn" aria-label="Menu">
+                <span class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="projects.html">Major Projects</a>
+                <a href="contact.html">Contact Us</a>
             </div>
-            <a href="index.html" class="logo">⚡ SMW </a>
         </div>
+        <a href="index.html" class="logo">⚡ SMW </a>
+    </div>
 
-        <!-- Right Side: Quick Links -->
-        <nav class="top-nav">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
+    <nav class="top-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Major Projects</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+</header>
     
     <main>
-        <!-- Hero Banner Slider -->
         <div class="hero-slider-container">
-            <!-- SLIDE 1 -->
             <div class="hero-slide active" style="background: linear-gradient(rgba(18, 50, 78, 0.85), rgba(18, 50, 78, 0.85)), url('images/frequency_grid.jpg'); background-size: cover; background-position: center;">
                 <div class="hero-content">
                     <h1>Savusavu <span>Motor Winders</span></h1>
@@ -47,7 +47,6 @@
                 </div>
             </div>
 
-            <!-- SLIDE 2 -->
             <div class="hero-slide" style="background: linear-gradient(rgba(18, 50, 78, 0.85), rgba(18, 50, 78, 0.85)), url('images/frequency_grid.jpg'); background-size: cover; background-position: center;">
                 <div class="hero-content">
                     <h1>Expert <span>Motor Winding</span> & Repairs</h1>
@@ -56,7 +55,6 @@
                 </div>
             </div>
 
-            <!-- SLIDE 3 -->
             <div class="hero-slide" style="background: linear-gradient(rgba(18, 50, 78, 0.85), rgba(18, 50, 78, 0.85)), url('images/frequency_grid.jpg'); background-size: cover; background-position: center;">
                 <div class="hero-content">
                     <h1>Marine & <span>Industrial</span> Electrical</h1>
@@ -65,11 +63,9 @@
                 </div>
             </div>
 
-            <!-- Slider Navigation Arrows -->
-            <button class="slider-arrow prev-arrow" id="prevSlide">&#10094;</button>
-            <button class="slider-arrow next-arrow" id="nextSlide">&#10095;</button>
+            <button class="slider-arrow prev-arrow" id="prevSlide" aria-label="Previous Slide">&#10094;</button>
+            <button class="slider-arrow next-arrow" id="nextSlide" aria-label="Next Slide">&#10095;</button>
             
-            <!-- Slide Dots at Bottom -->
             <div class="slider-dots">
                 <span class="dot active" data-slide="0"></span>
                 <span class="dot" data-slide="1"></span>
@@ -77,34 +73,28 @@
             </div>
         </div>
 
-        <!-- Separated Description Section -->
-        <div style="background-color: var(--light-bg); padding: 2.5rem; border-radius: 16px; box-shadow: var(--shadow-soft); border: 1px solid #e2e8f0; line-height: 1.8;">
-            <h2 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.8rem;">Family-Owned Electrical Workshop in Savusavu, Fiji</h2>
-            
-            <p style="margin-bottom: 1.2rem; color: #445;">We are a family-owned electrical workshop proudly serving Savusavu and the surrounding communities of Vanua Levu, Fiji. With years of hands-on experience and a strong commitment to quality workmanship, we provide reliable electrical solutions for domestic, automotive, marine, industrial, and commercial needs.</p>
-            <p style="margin-bottom: 1.2rem; color: #475569;">Our services include commercial electrical installation, marine electrical work, motor winding, auto electrical repairs, electrical appliance repairs, and generator servicing. We work with a wide range of equipment and are dedicated to finding practical, dependable solutions for every customer.</p>                
-            <p style="color: #445;">As a local family-owned business, we take pride in providing honest service, quality workmanship, and personalized attention to our customers. Whether it’s a small electrical repair or a larger industrial or marine job, our goal is to keep your equipment and electrical systems working safely and reliably.</p>
+        <div class="info-card-section">
+            <h2>Family-Owned Electrical Workshop in Savusavu, Fiji</h2>
+            <p>We are a family-owned electrical workshop proudly serving Savusavu and the surrounding communities of Vanua Levu, Fiji. With years of hands-on experience and a strong commitment to quality workmanship, we provide reliable electrical solutions for domestic, automotive, marine, industrial, and commercial needs.</p>
+            <p>Our services include commercial electrical installation, marine electrical work, motor winding, auto electrical repairs, electrical appliance repairs, and generator servicing. We work with a wide range of equipment and are dedicated to finding practical, dependable solutions for every customer.</p>                
+            <p>As a local family-owned business, we take pride in providing honest service, quality workmanship, and personalized attention to our customers. Whether it’s a small electrical repair or a larger industrial or marine job, our goal is to keep your equipment and electrical systems working safely and reliably.</p>
         </div>
         
-        <!-- Why Choose Us Section -->
         <section class="why-choose-us">
             <h2>Why Choose Us</h2>
             <div class="why-choose-grid">
-                <!-- Column 1 -->
                 <div class="why-choose-card">
                     <div class="why-icon">⚓</div>
                     <h3>Local & Family-Owned</h3>
                     <p>Proudly serving Savusavu and Vanua Levu with honest service, deep community roots, and dedicated care for every job.</p>
                 </div>
 
-                <!-- Column 2 -->
                 <div class="why-choose-card">
                     <div class="why-icon">⚡</div>
                     <h3>Fast & Reliable Turnaround</h3>
                     <p>We know equipment downtime costs money. We work efficiently to get your generators, motors, and electrical systems back up quickly.</p>
                 </div>
 
-                <!-- Column 3 -->
                 <div class="why-choose-card">
                     <div class="why-icon">🛠️</div>
                     <h3>Versatile Expertise</h3>
@@ -114,7 +104,9 @@
         </section>
     </main>
 
-    <!-- External JavaScript file for mobile menu & slider -->
+    <footer>
+        <p>&copy; 2026 Savusavu Motor Winders. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
